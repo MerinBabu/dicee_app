@@ -28,20 +28,24 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
+    
     return Center(
       child: Row(
         children: <Widget>[
-          Expanded(child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Image.asset('images/dice1.png'),
-          )),
-          Expanded(child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Image.asset('images/dice1.png'),
-          )),
+          Expanded(child: FlatButton(
+            onPressed: () {},
+            child: Image.asset('images/dice1.png'),)),
+          Expanded(child: FlatButton(
+              onPressed: () {},
+              child: Image.asset('images/dice1.png'))),
         ],
       ),
     );
